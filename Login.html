@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="index2.css">
+   
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDJVQPBMvE8-g3veC-NahGEWDsQOAtd6Yc",
+    authDomain: "dht11-training.firebaseapp.com",
+    databaseURL: "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "dht11-training",
+    storageBucket: "dht11-training.appspot.com",
+    messagingSenderId: "325497977243",
+    appId: "1:325497977243:web:0b46bf7207a7f5f855c93e"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        
+        function User_Login() {
+            var ip=device_ip();
+            alert("device",ip);
+            var usern = document.getElementById('username').value.trim();
+            var passw = document.getElementById('password').value.trim(); 
+            get(ref(db, 'user/' + usern)).then((snapshot) => {
+                const data = snapshot.val();
+                var dip=data['ip_addr'];
+                alert("db ip");
+                alert(typeof data['ip_addr']);
+                if((data &&data['password']==passw))
+                {
+                    localStorage.setItem('loggedOut', true);
+                    window.location.replace("home.html");
+                }
+                else{
+                    alert("ip not registered");
+                    location.reload();
+                }
+            }).catch((error) => {
+                alert("Unsuccessful");
+                console.error(error);
+            });
+        }
+        
+        window.onload = function() {
+            const loginForm = document.getElementById("Login-form");
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                User_Login();
+            });
+        };
+        function device_ip()
+        {
+            var x;
+            $(document).ready(()=>{
+                $.getJSON("https://api.ipify.org?format=json",
+                function (data) {
+                   x=data.ip;
+                })
+            });
+            alert(x);
+            return x;
+        }
+    </script>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+</head>
+<body>
+    <div id="homediv">
+        <img src="home.png" alt="Smart Home">
+    </div>
+    <form id="Login-form">
+        <div id="formdiv">
+            <div id="newdiv">
+                <div id="neww">
+                    <div class="username1">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                </div>
+                <div class="password1">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="b1">
+                    <button type="submit">Enter Your Virtual Home</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
