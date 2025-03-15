@@ -1,0 +1,90 @@
+.statusdiv{
+    height: 170px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.statusdiv2{
+    height: 170px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+p{
+    font-size: 30px;
+    margin: 10px;
+    margin-right: 40px;
+    color: blue;
+}
+button{
+    margin: 20px;
+    margin-left: 60px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+h1{
+    margin-top: 10px;
+    color: rgb(40, 32, 32);
+    margin-left: 150px;
+}
+.onoff{
+    display: flex;
+    margin: 20px;
+    margin-left: 40px;
+}
+.ponoff{
+    margin: 30px;
+    margin-left: 100px;
+}
+.lonoff{
+    margin: 20px;
+    margin-left: 90px;
+}
+#roomdiv{
+    background-color: rgb(230, 167, 167);
+   width: 730px;
+   height: 740px;
+   border-radius: 10px;
+}
+#h11{
+    color: rgb(27, 20, 14);
+    margin-left: 300px;
+}
+#h111{
+    color: rgb(23, 18, 13);
+    margin-left: 350px;
+}
+#RB_S,#RF_S,#KB_S,#KF_S{
+    width: 150px;
+    height: 150px;
+}
+#KB1_on,#KF1_on,#RB1_on,#RF1_on,#KR_on{
+    background-color: rgb(57, 238, 57);
+}
+#KB1_off,#KF1_off,#RB1_off,#RF1_off,#KR_off,#reulator{
+    background-color:red;
+}
+#Roommaindiv{
+    display: flex;
+    height: 750px;
+    width: 700px;
+}
+#kitchendiv{
+    background-color:rgb(218, 194, 194);
+    border-radius: 10px;
+    width: 730px;
+    height: 740px;
+}
+#rommsmoke{
+    margin-left:170px ;
+}
+#regdiv{
+    display: flex;
+    margin-left: 80px;
+}
+.ronoff{
+    margin: 20px;
+    margin-left: 40px;
+}

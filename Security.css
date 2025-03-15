@@ -1,0 +1,24 @@
+.imgs{
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+#maindiv{
+    width: 1470px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Names{
+    font-size: 20px;
+    text-align: start;
+}
+.para{
+    font-size: 25px;
+    color: rgb(15, 3, 3);
+}
+body{
+    background-color: rgb(232, 232, 162);
+}

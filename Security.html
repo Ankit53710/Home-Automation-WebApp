@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Area</title>
+    <link rel="stylesheet" href="Security.css">
+</head>
+<body>
+    <div class="center-content">
+        <p class="para">Live Capture image On entrance</p>
+
+        <div>
+            <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/IMG_20240410_064239_626.jpg?alt=media&token=4e04bed7-4f3f-4046-a222-d442fefb36d5" alt="live_image" title="entrance" id="myImage">
+            <div class="Names">Live image</div>
+        </div>
+    </div>
+        <p class="para">Persons who have access to your home security entrance </p>
+        <div id="maindiv">
+            <div>
+                <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/mehak_Kushwaha.jpg?alt=media&token=ab9c3e13-e9ae-4e01-a6bc-24f44df08f0f" alt="mehak" title="mehak_Kushwaha">
+                <div class="Names">Mehak Kushwaha</div>
+            </div>
+            <div>
+                <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/Formal_Photo_mine.jpg?alt=media&token=6aa7ce88-dfbc-42e6-984b-3356780a3df2" alt="Ankit" title="Ankit_Mewada">
+                <div class="Names">Ankit Mewada</div>
+            </div>
+            <div>
+                <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/sourabh.jpg?alt=media&token=7ceca6a4-b879-42d2-b775-90648514d3ca" alt="sourabh" title="Sourabh Verma">
+                <div class="Names">Sourabh Verma</div>
+            </div>
+            <div>
+                <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/yogesh.jpg?alt=media&token=d0af5439-8d32-4ae8-9b6e-d71b32cb9a64" alt="Yogesh" title="Yogesh Kumar">
+                <div class="Names">Yogesh Kumar</div>
+            </div>
+            <div>
+                <img class="imgs" src="https://firebasestorage.googleapis.com/v0/b/dht11-training.appspot.com/o/Satyam_Pic.jpg?alt=media&token=f94b1e31-0b4a-481e-85b7-dbb290ff5612" alt="Ayush" title="Satyam Mishra">
+                <div class="Names">Satyam Mishra</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <p class="para">Do you wish to add a new person to your home security entrance?</p>
+            <div>If Yes Enter His/Her Name
+                <input type="text">
+                <div>Upload His/Her Photos (*at least 10 photos) 
+                    <input type="file" id="file" name="file[]" accept="image/*">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+    <script>
+        // Replace with your Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDJVQPBMvE8-g3veC-NahGEWDsQOAtd6Yc",
+    authDomain: "dht11-training.firebaseapp.com",
+    databaseURL: "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "dht11-training",
+    storageBucket: "dht11-training.appspot.com",
+    messagingSenderId: "325497977243",
+    appId: "1:325497977243:web:0b46bf7207a7f5f855c93e"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+
+        // Reference to the image in Firebase Storage
+        const storageRef = storage.ref("live_image.jpg");
+
+        // Get the download URL for the image
+        storageRef.getDownloadURL().then(function(url) 
+        {
+            document.getElementById('myImage').src = url;
+        }).catch(function(error) {
+            // Handle any errors
+            console.error('Error getting download URL:', error);
+        });
+    </script>
+</body>
+</html>

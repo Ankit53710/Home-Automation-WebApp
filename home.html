@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Automation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+        <div class="banner">
+          <div class="banner-content">
+            <div class="panel">
+              <span class="material-symbols-outlined">menu</span>
+              <a href="#">All</a>
+            </div>
+    
+            <ul class="links">
+              <li><a href="Gardening.html">Gardening</a></li>
+              <li><a href="Room Control.html">Electrical Device</a></li>
+              <li><a href="Security.html">Entry Maintain</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact </a></li>
+            </ul>
+            <div class="deals",class="links">
+              <button onclick="Logout_fun()">Logout</button>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      
+ <!--<nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="#">Home Automation</a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">Home Automation</span>
+              <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="garden.html">Gardening</a>
+                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li><a href="#">View Status</a></li>
+                  <li><a href="#">Update Status</a></li>
+                  
+                  </li>
+                </ul>
+              </li>
+    
+    
+              <li>
+                <a href="#">Electrical Device</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="#">View Status</a></li>
+                  <li><a href="#">Update Status</a></li>
+                </ul>
+              </li>
+    
+    
+              <li>
+                <a href="#">Entry Maintain</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="#">View Status </a></li>
+                  <li><a href="#">Peoples Count</a></li>
+                </ul>
+              </li>
+          <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.html">Login</a></li>
+            </ul>
+          </div>
+         
+        </div>
+      </nav>
+     </header>
+    -->
+    <section class="hero-section"></section>
+
+    <section class="shop-section">
+      <div class="shop-images">
+        <div class="shop-link">
+          <h3>Gardening</h3>
+          <img src="images/gardening.jpeg" alt="card">
+          <a href="Garden.html">Ok</a>
+        </div>
+        <div class="shop-link">
+          <h3> Electrical Device </h3>
+          <img src="images/bulb.jpeg" alt="card">
+          <a href="#">Ok</a>
+        </div>
+        
+        <div class="shop-link">
+          <h3>Entry Maintain</h3>
+          <img src="images/gate.jpeg" alt="card">
+          <a href="#">Ok</a>
+        </div>
+
+        <div class="shop-link">
+          <h3>Kitchen</h3>
+          <img src="images/cylinder.jpeg" alt="card">
+          <a href="#">Ok</a>
+        </div>
+       
+       
+        
+      </div>
+    </section>
+
+    <footer>
+      <a href="#" class="footer-title">
+        Back to top
+      </a>
+      <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+     
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3></h3>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          
+          
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19</a></li>
+          <li><a href="#">Your Account</a></li>
+          
+        </ul>
+      </div>
+    </footer>
+<script>
+  // function Logout_fun()
+  // {
+  //   localStorage.setItem('loggedOut', true);
+  //   window.location.replace("Login.html");
+  // }
+  function Logout_fun() {
+    // Clear local storage and session storage
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Clear cookies
+    document.cookie.split(";").forEach((c) => {
+        document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+
+    // Prevent back navigation after logout
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+
+    // Redirect to login page
+    window.location.replace("Login.html");
+}
+
+
+</script>
+</body>
+</html>
