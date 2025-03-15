@@ -13,9 +13,9 @@ Kled1.on()
 Kfan1.on()
 R1L1.on()
 R1fan1.on()
-ssid = "Ankit"
-password = "88888862"
-firebase_url = "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app/Home_Appliances.json"
+ssid = "SSID"
+password = "password"
+firebase_url = "firebase_url/Home_Appliances.json"
 regulator=False
 
 

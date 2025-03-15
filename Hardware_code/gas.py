@@ -21,8 +21,8 @@ Kgas = ADC(Pin(Kgas_p))
 
 # Constants and configurations
 conversion_factor = 100 / 1023
-ssid = "Ankit"
-password = "88888862"
+ssid = "ssid"
+password = "password"
 firebase_url = "firebase_rtdb_url/Home_Appliances.json"
 
 def connect_to_wifi():
