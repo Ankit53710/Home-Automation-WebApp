@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .imgs{
     height: 200px;
     width: 200px;
@@ -21,4 +22,29 @@
 }
 body{
     background-color: rgb(232, 232, 162);
+=======
+.imgs{
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+#maindiv{
+    width: 1470px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Names{
+    font-size: 20px;
+    text-align: start;
+}
+.para{
+    font-size: 25px;
+    color: rgb(15, 3, 3);
+}
+body{
+    background-color: rgb(232, 232, 162);
+>>>>>>> d03b07d092c6e32d77ddd929c54aee1997419dc1
 }

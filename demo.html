@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,3 +73,79 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Images</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Firebase Images</h1>
+    <div class="gallery" id="image-gallery"></div>
+    <button onclick="getImagesFromStorage()" id="showButton">Show images</button>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"></script>
+    <script type="module">
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    const firebaseConfig = {
+    apiKey: "AIzaSyDJVQPBMvE8-g3veC-NahGEWDsQOAtd6Yc",
+    authDomain: "dht11-training.firebaseapp.com",
+    databaseURL: "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "dht11-training",
+    storageBucket: "dht11-training.appspot.com",
+    messagingSenderId: "325497977243",
+    appId: "1:325497977243:web:81706b0a84881f4255c93e"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Get a reference to Firebase Storage
+        const storage = app.storage();
+        const storageRef = storage.ref();
+        const imageGallery = document.getElementById('image-gallery');
+
+        function getImagesFromStorage() {
+            alert("entered")
+            const directoryRef = storageRef.child('Autherized_Users/');
+
+            // List all items in the directory
+            directoryRef.list().then((result) => {
+                result.items.forEach((imageRef) => {
+                    // Get the download URL for the item
+                    imageRef.getDownloadURL().then((url) => {
+                        const img = document.createElement('img');
+                        img.src = url;
+                        imageGallery.appendChild(img);
+                    }).catch((error) => {
+                        console.error('Error fetching image URL:', error);
+                    });
+                });
+            }).catch((error) => {
+                console.error('Error listing items in directory:', error);
+            });
+        }
+
+        showButton.addEventListener('click', getImagesFromStorage);
+    </script>
+</body>
+</html>
+>>>>>>> d03b07d092c6e32d77ddd929c54aee1997419dc1
