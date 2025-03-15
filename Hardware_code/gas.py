@@ -23,7 +23,7 @@ Kgas = ADC(Pin(Kgas_p))
 conversion_factor = 100 / 1023
 ssid = "Ankit"
 password = "88888862"
-firebase_url = "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app/Home_Appliances.json"
+firebase_url = "firebase_rtdb_url/Home_Appliances.json"
 
 def connect_to_wifi():
     station = network.WLAN(network.STA_IF)
