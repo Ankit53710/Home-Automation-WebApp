@@ -5,10 +5,10 @@ import network
 
 motor_p=Pin(13,Pin.OUT)
 motor_p.on()
-ssid = "Ankit"
-password = "88888862"
+ssid = "SSID"
+password = "password"
 
-firebase_url = "https://dht11-training-default-rtdb.asia-southeast1.firebasedatabase.app/Gardening.json"
+firebase_url = "firebase_rtdb_url/Gardening.json"
 
 def connect_to_wifi():
     station = network.WLAN(network.STA_IF)
