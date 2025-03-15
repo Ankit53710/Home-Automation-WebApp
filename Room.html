@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Control</title>
+    <link rel="stylesheet" href="Rooms.css">
+</head>
+<body>
+    <div id="Roommaindiv">
+        <div id="roomdiv">
+            <h1 id="h11">Living Room</h1>
+            <div class="statusdiv">
+                <div>
+                    <p>Your Light Status</p>
+                    <img src="/images/loading..gif" id="RB_S">
+                </div>
+                <div>
+                    <p>Your Fan Status</p>
+                    <img src="/images/loading..gif" id="RF_S">
+                </div>
+            </div>
+            <br><br>
+            <h1>Switch ON/OFF your Light and Fan</h1>
+            <div class="onoff">
+                <div>
+                    <p class="ponoff">Light ON/OFF</p>
+                    <button class="lonoff" id="RB1_on">ON</button>
+                    <button class="lonoff" id="RB1_off">OFF</button>
+                </div>
+                <div>
+                    <p class="ponoff">Fan ON/OFF</p>
+                    <button class="lonoff" id="RF1_on">ON</button>
+                    <button class="lonoff" id="RF1_off">OFF</button>
+                </div>
+            </div>
+            <p id="rommsmoke">Smoke Level in your Room Loading...</p>
+        </div>
+
+        <div id="kitchendiv">
+            <h1 id="h111">Kitchen</h1>
+            <div class="statusdiv2">
+                <div>
+                    <p>Your Light Status</p>
+                    <img src="/images/loading..gif" id="KB_S">
+                </div>
+                <div>
+                    <p>Your Fan Status</p>
+                    <img src="/images/loading..gif" id="KF_S">
+                </div>
+            </div>
+            <br><br>
+            <h1>Switch ON/OFF your Light and Fan</h1>
+            <div class="onoff">
+                <div>
+                    <p class="ponoff">Light ON/OFF</p>
+                    <button class="lonoff" id="KB1_on">ON</button>
+                    <button class="lonoff" id="KB1_off">OFF</button>
+                </div>
+                <div>
+                    <p class="ponoff">Fan ON/OFF</p>
+                    <button class="lonoff" id="KF1_on">ON</button>
+                    <button class="lonoff" id="KF1_off">OFF</button>
+                </div>
+            </div>
+            <p id="Kitchensmoke">Smoke Level in your Kitchen Loading...</p>
+            <div id="regdiv">
+                <div>
+                    <p>Your Gas Regulator Status</p>
+                    <button id="regulator">Off</button>
+                </div>
+                <div>
+                    <p>Switch ON/OFF Gas Regulator</p>
+                    <button class="ronoff" id="KR_on">ON</button>
+                    <button class="ronoff" id="KR_off">OFF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="room.js"></script>
+</body>
+</html>
