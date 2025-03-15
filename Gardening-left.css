@@ -1,0 +1,240 @@
+body {
+    font-family: Arial;
+    color: rgb(10, 10, 10);
+  }
+  
+  h1 {
+      text-align: center;
+      font-family:  serif;
+     
+  }
+  h2 {
+    text-align: center;
+    font-family:  serif;
+   
+  }
+  
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: rgb(218, 194, 194);
+  }
+  
+  .right {
+    right: 0;
+    background-color: rgb(159, 119, 119);
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  
+  
+  
+  
+    .container1 {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    
+    
+    .container1 .btn {
+      position: absolute;
+      top: 200%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #53aeab;
+      color: black;
+      font-size: 16px;
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .container1 .btn:hover {
+      background-color: rgb(228, 147, 147);
+      color: white;
+    }
+  
+  
+    .container1 {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    
+    
+    .container1 .btn1 {
+      position: absolute;
+      top: 200%;
+      left: 120%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #53aeab;
+      color: black;
+      font-size: 16px;
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .container1 .btn1:hover {
+      background-color: rgb(228, 147, 147);
+      color: white;
+    }
+  
+    .container1 {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    
+    
+    .container1 .btn0 {
+      position: absolute;
+      top: 200%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #53aeab;
+      color: black;
+      font-size: 16px;
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .container1 .btn0:hover {
+      background-color: rgb(228, 147, 147);
+      color: white;
+    }
+  
+  
+    body {font-family: Arial, Helvetica, sans-serif;}
+  form {border: 3px solid #f1f1f1;}
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button9 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button9:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 10px;
+    width: 300px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+   
+  }
+  .container1 .btn7 {
+      position: absolute;
+      top: 400%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #53aeab;
+      color: black;
+      font-size: 16px;
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .buttona {
+      background-color: #53aeab;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      align-items: center;
+      top: 400%;
+      left: 50%;
+    }
+    
+    .buttona:hover43 {
+      opacity: 0.8;
+      color: #f1f1f1;
+    }
+    
+  #M_S
+  {
+    width: 350px;
+    height: 250px;
+    padding-left: 200px;
+  }
